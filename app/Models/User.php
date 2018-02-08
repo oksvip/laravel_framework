@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use App\Traits\UserTrait;
+use App\Models\Traits\UserTrait;
 
 class User extends Model
 {

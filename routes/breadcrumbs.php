@@ -4,7 +4,7 @@ use \DaveJamesMiller\Breadcrumbs\Facades\Breadcrumbs;
 
 // Home
 Breadcrumbs::register('breadcrumbs', function ($breadcrumbs) {
-    $breadcrumbs->push('Breadcrumbs', route('breadcrumbs.index'));
+    $breadcrumbs->push('Breadcrumbs', route('home.breadcrumbs.index'));
 });
 
 // Home > About

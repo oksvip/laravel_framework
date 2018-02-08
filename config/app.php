@@ -171,6 +171,7 @@ return [
          */
         Barryvdh\Debugbar\ServiceProvider::class,
         Former\FormerServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -231,6 +232,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
         'Former' => 'Former\Facades\Former',
+        'Image' => Intervention\Image\Facades\Image::class,
 
     ],
 

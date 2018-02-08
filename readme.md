@@ -188,7 +188,10 @@ envoy run update-with-composer-install
 ## 扩展包使用情况
 
 | 扩展包 | 一句话描述 | 本项目应用场景 |
-| --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | --- | --- |
+| [guzzlehttp/guzzle](https://github.com/guzzle/guzzle) | HTTP 请求套件 | 请求百度翻译 API  |
+| [predis/predis](https://github.com/nrk/predis.git) | Redis 官方首推的 PHP 客户端开发包 | 缓存驱动 Redis 基础扩展包 |
+| [Intervention/image](https://github.com/Intervention/image) | 图片处理功能库 | 用于图片裁切 |
 | [barryvdh/laravel-debugbar](https://github.com/barryvdh/laravel-debugbar) | 页面调试工具栏 | 开发环境中的 DEBUG |
 | [barryvdh/laravel-ide-helper](https://github.com/barryvdh/laravel-ide-helper) | Laravel 5 IDE Helper Generator | 主要用于类方法跟踪查阅 |
 | [davejamesmiller/laravel-breadcrumbs](https://github.com/davejamesmiller/laravel-breadcrumbs) | Laravel Breadcrumbs | 主要用于网页端面包屑导航 |

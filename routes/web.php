@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', function () {return view('welcome');})->name('index');
+Route::get('/', function () {return view('home.pages.home');})->name('index');
 Route::resource('breadcrumbs', 'BreadcrumbsController', ['only' => ['index']]);
 Route::resource('users', 'UsersController', ['only' => ['index']]);
 Route::resource('articles', 'ArticlesController', ['only' => ['index']]);

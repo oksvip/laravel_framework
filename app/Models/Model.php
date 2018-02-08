@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model as EloquentModel;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use \Venturecraft\Revisionable\RevisionableTrait;
-use App\Traits\ModelTrait;
+use App\Models\Traits\ModelTrait;
 
 class Model extends EloquentModel
 {
