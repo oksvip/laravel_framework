@@ -11,5 +11,6 @@
 |
 */
 
+Route::get('/', 'HomeController@index')->name('index');
 Route::resource('users', 'UsersController', ['only' => ['index']]);
 Route::resource('articles', 'ArticlesController', ['only' => ['index']]);

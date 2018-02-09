@@ -11,8 +11,25 @@ var mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/assets/home/js/app.js', 'public/static/home/js')
-   .sass('resources/assets/home/sass/app.scss', 'public/static/home/css');
+mix.styles([
+    'resources/assets/admin/adminlte/bower/bootstrap/dist/css/bootstrap.min.css',
+    'resources/assets/admin/adminlte/bower/font-awesome/css/font-awesome.min.css',
+    'resources/assets/admin/adminlte/bower/Ionicons/css/ionicons.min.css',
+    'resources/assets/admin/adminlte/dist/css/AdminLTE.min.css',
+    'resources/assets/admin/adminlte/dist/css/skins/_all-skins.css'
+], 'public/static/admin/css/app.css');
+
+mix.scripts([
+    'resources/assets/admin/adminlte/bower/jquery/dist/jquery.min.js',
+    'resources/assets/admin/adminlte/bower/bootstrap/dist/js/bootstrap.min.js',
+    'resources/assets/admin/adminlte/dist/js/adminlte.min.js'
+], 'public/static/admin/js/app.js');
+
+
+mix.copy('resources/assets/admin/adminlte/dist/img', 'public/static/admin/images/adminlte');
+mix.copy('resources/assets/admin/adminlte/bower/bootstrap/fonts', 'public/static/admin/fonts');
+mix.copy('resources/assets/admin/adminlte/bower/font-awesome/fonts', 'public/static/admin/fonts');
+mix.copy('resources/assets/admin/adminlte/bower/Ionicons/fonts', 'public/static/admin/fonts');
 
 // mix.js('resources/assets/admin/js/app.js', 'public/static/admin/js')
 //     .sass('resources/assets/admin/sass/app.scss', 'public/static/admin/css');
