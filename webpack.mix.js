@@ -19,6 +19,8 @@ mix.styles([
     'resources/assets/admin/adminlte/dist/css/skins/_all-skins.css'
 ], 'public/static/admin/css/app.css');
 
+mix.sass('resources/assets/admin/sass/app.scss', 'public/static/admin/css');
+
 mix.scripts([
     'resources/assets/admin/adminlte/bower/jquery/dist/jquery.min.js',
     'resources/assets/admin/adminlte/bower/bootstrap/dist/js/bootstrap.min.js',
