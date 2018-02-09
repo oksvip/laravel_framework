@@ -36,6 +36,7 @@ BODY TAG OPTIONS:
 
     <!-- Main Header -->
     @include('admin.layouts._header')
+    @include('admin.layouts._messages')
 
     <!-- Left side column. contains the logo and sidebar -->
     @include('admin.layouts._sidebar')
