@@ -34,6 +34,8 @@ mix.copy('resources/assets/admin/adminlte/dist/img', 'public/static/admin/images
 mix.copy('resources/assets/admin/adminlte/bower/bootstrap/fonts', 'public/static/admin/fonts');
 mix.copy('resources/assets/admin/adminlte/bower/font-awesome/fonts', 'public/static/admin/fonts');
 mix.copy('resources/assets/admin/adminlte/bower/Ionicons/fonts', 'public/static/admin/fonts');
+mix.copy('resources/assets/admin/adminlte/plugins/iCheck/square/blue.png', 'public/static/admin/css');
+mix.copy('resources/assets/admin/adminlte/plugins/iCheck/square/blue@2x.png', 'public/static/admin/css');
 
 // mix.js('resources/assets/admin/js/app.js', 'public/static/admin/js')
 //     .sass('resources/assets/admin/sass/app.scss', 'public/static/admin/css');

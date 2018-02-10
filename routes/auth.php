@@ -11,5 +11,6 @@
 |
 */
 
-Route::get('/login', 'LoginController@index')->name('login');
-Route::get('/register', 'RegisterController@index')->name('register');
+Route::get('/login', 'LoginController@index')->name('login.index');
+Route::post('/login', 'LoginController@login')->name('login');
+Route::get('/register', 'RegisterController@index')->name('register.index');

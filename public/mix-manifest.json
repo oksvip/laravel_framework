@@ -1,4 +1,6 @@
 {
     "/static/admin/css/app.css": "/static/admin/css/app.css",
-    "/static/admin/js/app.js": "/static/admin/js/app.js"
+    "/static/admin/js/app.js": "/static/admin/js/app.js",
+    "/static/admin/css/blue.png": "/static/admin/css/blue.png",
+    "/static/admin/css/blue@2x.png": "/static/admin/css/blue@2x.png"
 }

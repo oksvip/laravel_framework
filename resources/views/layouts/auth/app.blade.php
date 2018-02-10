@@ -14,14 +14,14 @@
     @include('layouts.common.admin_auth._support')
 
 </head>
-<body class="hold-transition login-page">
+<body class="hold-transition register-page">
 
 <!-- Body -->
 @yield('content')
 
 <!-- JS -->
 @include('layouts.common.admin_auth._js')
-@section('js') @show
+@section('js')@show
 
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
      Both of these plugins are recommended to enhance the
