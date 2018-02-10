@@ -8,10 +8,10 @@
     <title>@yield('title', '首页') - {{ config('app.name') }}后台管理</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="{{ asset('static/admin/css/app.css') }}">
+    @include('layouts.common.admin_auth._css')
 
     <!-- IE8 support of HTML5 elements and media queries -->
-    @include('admin.layouts._support')
+    @include('layouts.common.admin_auth._support')
 
 </head>
 <!--
@@ -35,25 +35,26 @@ BODY TAG OPTIONS:
 <div class="wrapper">
 
     <!-- Main Header -->
-    @include('admin.layouts._header')
-    @include('admin.layouts._messages')
+    @include('layouts.admin._header')
+    @include('layouts.common.admin_auth._messages')
 
     <!-- Left side column. contains the logo and sidebar -->
-    @include('admin.layouts._sidebar')
+    @include('layouts.admin._sidebar')
 
     <!-- Content Wrapper. Contains page content -->
     @yield('content')
 
     <!-- Main Footer -->
-    @include('admin.layouts._footer')
+    @include('layouts.admin._footer')
 
     <!-- Control Sidebar -->
-    @include('admin.layouts._control')
+    @include('layouts.admin._control')
 </div>
 <!-- ./wrapper -->
 
 <!-- JS -->
-<script src="{{ asset('static/admin/js/app.js') }}"></script>
+@include('layouts.common.admin_auth._js')
+@section('js') @show
 
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
      Both of these plugins are recommended to enhance the

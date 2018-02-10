@@ -14,4 +14,8 @@ class LoginController extends AuthBaseController
     | to conveniently provide its functionality to your applications.
     |
     */
+    public function index()
+    {
+        return view('auth.login');
+    }
 }

@@ -14,4 +14,8 @@ class RegisterController extends AuthBaseController
     | provide this functionality without requiring any additional code.
     |
     */
+    public function index()
+    {
+        return view('auth.register');
+    }
 }
