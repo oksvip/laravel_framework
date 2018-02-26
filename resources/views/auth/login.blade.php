@@ -13,14 +13,12 @@
             {{ csrf_field() }}
 
             <div class="form-group has-feedback {{ $errors->has('email') ? 'has-error' : '' }}">
-                {!! Former::label('联系人', 'email') !!}
-                <input type="email" class="form-control" name="email" id="email" placeholder="邮箱">
+                {!! Former::text('email', '', old('email'))->placeholder('请输入邮箱地址')->label('邮箱')->required() !!}
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-                {!! $errors->first('email', '<label class="control-label" for="inputError"><i class="fa fa-times-circle-o"></i> :message</label>') !!}
+                {!! $errors->first('email', App\Helpers\Helpers::showErrorMessageHtml()) !!}
             </div>
             <div class="form-group has-feedback {{ $errors->has('password') ? 'has-error' : '' }}">
-                {!! Former::label('密码：', 'password') !!}
-                <input type="password" class="form-control" name="password" id="password" placeholder="密码">
+                {!! Former::password('password', ':')->placeholder('请输入密码')->label('密码')->required() !!}
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                 {!! $errors->first('password', '<label class="control-label" for="inputError"><i class="fa fa-times-circle-o"></i> :message</label>') !!}
             </div>

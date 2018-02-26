@@ -2,11 +2,13 @@
 
 namespace App\Models;
 
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\Models\Traits\UserTrait;
 
-class User extends Model
+class User extends Authenticatable
 {
-    use UserTrait;
+    use Notifiable,UserTrait;
 
     /**
      * The name of table.

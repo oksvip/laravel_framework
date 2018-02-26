@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Auth;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 
 class LoginController extends AuthBaseController
 {
@@ -38,6 +40,12 @@ class LoginController extends AuthBaseController
             'password.required' => '密码必填！',
         ]);
 
-        echo 234;die;
+        if (! Auth::attempt($request->except(['_token']))) {
+            return Redirect::back()
+                ->withInput()
+                ->with('danger', '登录失败！');
+        }
+        return Redirect::route('admin.home')
+            ->with('success', '登录成功！');
     }
 }

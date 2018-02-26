@@ -14,3 +14,4 @@
 Route::get('/login', 'LoginController@index')->name('login.index');
 Route::post('/login', 'LoginController@login')->name('login');
 Route::get('/register', 'RegisterController@index')->name('register.index');
+Route::post('/register', 'RegisterController@register')->name('register');

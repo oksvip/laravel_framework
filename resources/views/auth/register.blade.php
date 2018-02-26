@@ -9,28 +9,39 @@
         <div class="register-box-body">
             <p class="login-box-msg">注册帐号</p>
 
-            <form action="../../index.html" method="post">
-                <div class="form-group has-feedback">
-                    <input type="text" class="form-control" placeholder="用户名">
+            <form action="{{ route('auth.register') }}" method="post">
+                {{ csrf_field() }}
+
+                <div class="form-group has-feedback {{ $errors->has('name') ? 'has-error' : '' }}">
+                    {!! Former::text('name', '', old('name'))->placeholder('请输入用户名')->label('用户名')->required() !!}
                     <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                    {!! $errors->first('name', App\Helpers\Helpers::showErrorMessageHtml()) !!}
                 </div>
-                <div class="form-group has-feedback">
-                    <input type="email" class="form-control" placeholder="邮件地址">
+
+                <div class="form-group has-feedback {{ $errors->has('email') ? 'has-error' : '' }}">
+                    {!! Former::text('email', '', old('email'))->placeholder('请输入邮箱地址')->label('邮箱')->required() !!}
                     <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                    {!! $errors->first('email', App\Helpers\Helpers::showErrorMessageHtml()) !!}
                 </div>
-                <div class="form-group has-feedback">
-                    <input type="password" class="form-control" placeholder="密码">
+
+                <div class="form-group has-feedback {{ $errors->has('password') ? 'has-error' : '' }}">
+                    {!! Former::password('password', '')->placeholder('请输入密码')->label('密码')->required() !!}
                     <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                    {!! $errors->first('password', App\Helpers\Helpers::showErrorMessageHtml()) !!}
                 </div>
-                <div class="form-group has-feedback">
-                    <input type="password" class="form-control" placeholder="重复密码">
-                    <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
+
+                <div class="form-group has-feedback {{ $errors->has('password_confirmation') ? 'has-error' : '' }}">
+                    {!! Former::password('password_confirmation', '')->placeholder('请输入确认密码')->label('确认密码')->required() !!}
+                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                    {!! $errors->first('password_confirmation', App\Helpers\Helpers::showErrorMessageHtml()) !!}
                 </div>
+
                 <div class="row">
                     <div class="col-xs-8">
                         <div class="checkbox icheck">
-                            <label>
-                                <input type="checkbox"> 同意<a href="#">条款</a>
+                            <label class="{{ $errors->has('agree_term') ? 'has-error' : '' }}">
+                                <input type="checkbox" name="agree_term" value="1"> 同意<a href="#">条款</a>
+                                {!! $errors->first('agree_term', App\Helpers\Helpers::showErrorMessageHtml()) !!}
                             </label>
                         </div>
                     </div>

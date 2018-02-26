@@ -54,4 +54,12 @@ class Helpers
 
         return response()->json($response_data, 200);
     }
+
+    /**
+     * Form全局错误信息
+     */
+    public static function showErrorMessageHtml()
+    {
+        return '<label class="control-label" for="inputError"><i class="fa fa-times-circle-o"></i> :message</label>';
+    }
 }

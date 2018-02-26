@@ -17,7 +17,8 @@ mix.styles([
     'resources/assets/admin/adminlte/bower/Ionicons/css/ionicons.min.css',
     'resources/assets/admin/adminlte/dist/css/AdminLTE.min.css',
     'resources/assets/admin/adminlte/dist/css/skins/_all-skins.css',
-    'resources/assets/admin/adminlte/plugins/iCheck/square/blue.css'
+    'resources/assets/admin/adminlte/plugins/iCheck/square/blue.css',
+    'resources/assets/404/css/404.css'
 ], 'public/static/admin/css/app.css');
 
 mix.sass('resources/assets/admin/sass/app.scss', 'public/static/admin/css');
@@ -26,7 +27,8 @@ mix.scripts([
     'resources/assets/admin/adminlte/bower/jquery/dist/jquery.min.js',
     'resources/assets/admin/adminlte/bower/bootstrap/dist/js/bootstrap.min.js',
     'resources/assets/admin/adminlte/dist/js/adminlte.min.js',
-    'resources/assets/admin/adminlte/plugins/iCheck/icheck.min.js'
+    'resources/assets/admin/adminlte/plugins/iCheck/icheck.min.js',
+    'resources/assets/404/js/404.js'
 ], 'public/static/admin/js/app.js');
 
 
