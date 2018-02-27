@@ -6,6 +6,13 @@
         <b>登录Sample</b>
     </div>
     <!-- /.login-logo -->
+
+    <!-- messages -->
+    @include('layouts.common.admin_auth._messages')
+
+    <!-- errors -->
+    @include('layouts.common.auth._errors')
+
     <div class="login-box-body">
         <p class="login-box-msg">登录后台</p>
 
@@ -15,18 +22,16 @@
             <div class="form-group has-feedback {{ $errors->has('email') ? 'has-error' : '' }}">
                 {!! Former::text('email', '', old('email'))->placeholder('请输入邮箱地址')->label('邮箱')->required() !!}
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-                {!! $errors->first('email', App\Helpers\Helpers::showErrorMessageHtml()) !!}
             </div>
             <div class="form-group has-feedback {{ $errors->has('password') ? 'has-error' : '' }}">
                 {!! Former::password('password', ':')->placeholder('请输入密码')->label('密码')->required() !!}
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-                {!! $errors->first('password', '<label class="control-label" for="inputError"><i class="fa fa-times-circle-o"></i> :message</label>') !!}
             </div>
             <div class="row">
                 <div class="col-xs-8">
                     <div class="checkbox icheck">
                         <label>
-                            <input type="checkbox" name="remember" id="remember"> 记住我
+                            <input type="checkbox" name="remember" id="remember" value="1"> 记住我
                         </label>
                     </div>
                 </div>

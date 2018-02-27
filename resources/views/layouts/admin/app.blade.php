@@ -36,10 +36,12 @@ BODY TAG OPTIONS:
 
     <!-- Main Header -->
     @include('layouts.admin._header')
-    @include('layouts.common.admin_auth._messages')
 
     <!-- Left side column. contains the logo and sidebar -->
     @include('layouts.admin._sidebar')
+
+    <!-- Messages -->
+    @include('layouts.common.admin_auth._messages')
 
     <!-- Content Wrapper. Contains page content -->
     @yield('content')

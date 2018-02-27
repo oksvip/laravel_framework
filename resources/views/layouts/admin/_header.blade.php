@@ -128,7 +128,7 @@
                             <img src="{{ asset('static/admin/images/adminlte/user2-160x160.jpg') }}" class="img-circle" alt="User Image">
 
                             <p>
-                                Alexander Pierce - Web Developer
+                                {{ Auth::User()->name }}
                                 <small>Member since Nov. 2012</small>
                             </p>
                         </li>
@@ -153,7 +153,11 @@
                                 <a href="#" class="btn btn-default btn-flat">Profile</a>
                             </div>
                             <div class="pull-right">
-                                <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                <form action="{{ route('auth.logout') }}" method="post">
+                                    {{ csrf_field() }}
+                                    {{ method_field('delete') }}
+                                    <button class="btn btn-default btn-flat" type="submit">登出</button>
+                                </form>
                             </div>
                         </li>
                     </ul>

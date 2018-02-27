@@ -8,6 +8,13 @@ use Illuminate\Support\Facades\Redirect;
 
 class RegisterController extends AuthBaseController
 {
+    public function __construct()
+    {
+        $this->middleware('guest', [
+            'only' => ['index', 'register']
+        ]);
+    }
+
     /*
     |--------------------------------------------------------------------------
     | Register Controller
@@ -49,6 +56,7 @@ class RegisterController extends AuthBaseController
         ]);
 
         $request->merge(['password' => bcrypt($request->password)]);
+
         $registerResult = User::create($request->except('_token'));
 
         if (!$registerResult) {
@@ -58,6 +66,6 @@ class RegisterController extends AuthBaseController
         }
 
         return Redirect::route('auth.login')
-            ->with('success', '注册成功！');
+            ->with('success', '注册成功，请登录！');
     }
 }

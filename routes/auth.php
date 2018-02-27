@@ -13,5 +13,6 @@
 
 Route::get('/login', 'LoginController@index')->name('login.index');
 Route::post('/login', 'LoginController@login')->name('login');
+Route::delete('/logout', 'LoginController@logout')->name('logout');
 Route::get('/register', 'RegisterController@index')->name('register.index');
 Route::post('/register', 'RegisterController@register')->name('register');

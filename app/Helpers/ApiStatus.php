@@ -2,7 +2,7 @@
 
 namespace App\Helpers;
 
-class Status
+class ApiStatus
 {
     const SUCCESS_CODE = 200;
     const SUCCESS_MESSAGE = '成功';

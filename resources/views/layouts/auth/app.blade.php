@@ -16,9 +16,6 @@
 </head>
 <body class="hold-transition register-page">
 
-<!-- ERRORS -->
-@include('layouts.common.admin_auth._errors')
-
 <!-- Body -->
 @yield('content')
 
