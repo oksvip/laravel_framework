@@ -52,3 +52,17 @@ if (function_exists('api_response')) {
         return response()->json($response_data, 200);
     }
 }
+
+/**
+ * 拼接CDN资源路径
+ * @param $file_path 文件路径
+ */
+if (function_exists('cdn')) {
+    function cdn($file_path) {
+        $cnd_url = config('app.cdn_url');
+        if ($cnd_url && $file_path) {
+            return $cnd_url.$file_path;
+        }
+        return '';
+    }
+}
