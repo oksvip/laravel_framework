@@ -21,4 +21,10 @@ class AdminStatus
 
     const ALREADY_LOGIN_CODE = 100005;
     const ALREADY_LOGIN_MESSAGE = '您已登录，无需再次操作！';
+
+    const REGISTER_SUCCESS_CODE = 100006;
+    const REGISTER_SUCCESS_MESSAGE = '注册成功！';
+
+    const REGISTER_FAILURE_CODE = 100006;
+    const REGISTER_FAILURE_MESSAGE = '注册失败！';
 }

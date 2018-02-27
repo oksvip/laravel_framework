@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Helpers\AdminStatus;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 
 class RegisterController extends AuthBaseController
@@ -57,15 +59,19 @@ class RegisterController extends AuthBaseController
 
         $request->merge(['password' => bcrypt($request->password)]);
 
-        $registerResult = User::create($request->except('_token'));
+        $user = User::create($request->except('_token'));
 
-        if (!$registerResult) {
+        if (!$user) {
             return Redirect::back(302)
                 ->withInput()
-                ->with('danger', '注册失败，请重试！');
+                ->with('status-code', AdminStatus::REGISTER_FAILURE_CODE)
+                ->with('danger', AdminStatus::REGISTER_FAILURE_MESSAGE);
         }
 
-        return Redirect::route('auth.login')
-            ->with('success', '注册成功，请登录！');
+        Auth::login($user);
+
+        return Redirect::route('admin.index')
+            ->with('status-code', AdminStatus::REGISTER_SUCCESS_CODE)
+            ->with('success', AdminStatus::REGISTER_SUCCESS_MESSAGE);
     }
 }

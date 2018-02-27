@@ -11,8 +11,14 @@ class LoginController extends AuthBaseController
 {
     public function __construct()
     {
+        // login user can not visit
         $this->middleware('guest', [
             'only' => ['index', 'login']
+        ]);
+
+        // login user can visit
+        $this->middleware('auth', [
+            'except' => ['index', 'login']
         ]);
     }
 

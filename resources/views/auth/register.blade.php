@@ -6,6 +6,12 @@
             <b>注册Sample</b>
         </div>
 
+        <!-- messages -->
+        @include('layouts.common.admin_auth._messages')
+
+        <!-- errors -->
+        @include('layouts.common.auth._errors')
+
         <div class="register-box-body">
             <p class="login-box-msg">注册帐号</p>
 
@@ -15,33 +21,28 @@
                 <div class="form-group has-feedback {{ $errors->has('name') ? 'has-error' : '' }}">
                     {!! Former::text('name', '', old('name'))->placeholder('请输入用户名')->label('用户名')->required() !!}
                     <span class="glyphicon glyphicon-user form-control-feedback"></span>
-                    {!! $errors->first('name', App\Helpers\Helpers::showErrorMessageHtml()) !!}
                 </div>
 
                 <div class="form-group has-feedback {{ $errors->has('email') ? 'has-error' : '' }}">
                     {!! Former::text('email', '', old('email'))->placeholder('请输入邮箱地址')->label('邮箱')->required() !!}
                     <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-                    {!! $errors->first('email', App\Helpers\Helpers::showErrorMessageHtml()) !!}
                 </div>
 
                 <div class="form-group has-feedback {{ $errors->has('password') ? 'has-error' : '' }}">
                     {!! Former::password('password', '')->placeholder('请输入密码')->label('密码')->required() !!}
                     <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-                    {!! $errors->first('password', App\Helpers\Helpers::showErrorMessageHtml()) !!}
                 </div>
 
                 <div class="form-group has-feedback {{ $errors->has('password_confirmation') ? 'has-error' : '' }}">
                     {!! Former::password('password_confirmation', '')->placeholder('请输入确认密码')->label('确认密码')->required() !!}
                     <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-                    {!! $errors->first('password_confirmation', App\Helpers\Helpers::showErrorMessageHtml()) !!}
                 </div>
 
                 <div class="row">
                     <div class="col-xs-8">
                         <div class="checkbox icheck">
                             <label class="{{ $errors->has('agree_term') ? 'has-error' : '' }}">
-                                <input type="checkbox" name="agree_term" value="1"> 同意<a href="#">条款</a>
-                                {!! $errors->first('agree_term', App\Helpers\Helpers::showErrorMessageHtml()) !!}
+                                <input type="checkbox" name="agree_term" value="1"> 同意<a href="#" data-toggle="modal" data-target="#modal-terms">条款</a>
                             </label>
                         </div>
                     </div>
@@ -64,6 +65,31 @@
         </div>
         <!-- /.form-box -->
     </div>
+
+    <!-- modal-content -->
+    <div class="modal modal-success fade" id="modal-terms">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">{{ config('app.name') }} 服务条款</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        <!-- terms-content -->
+                        @include('auth.terms')
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline" data-dismiss="modal">我同意</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
 @endsection
 
 @section('js')
