@@ -1,5 +1,7 @@
 @extends('layouts.home.app')
 
+@section('title', '关于')
+
 @section('content')
 	<div id="aboutwrap">
 		<div class="container">

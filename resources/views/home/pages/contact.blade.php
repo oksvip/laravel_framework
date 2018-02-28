@@ -1,5 +1,7 @@
 @extends('layouts.home.app')
 
+@section('title', '联系')
+
 @section('content')
 	<div id="contactwrap">
 		<div class="container">

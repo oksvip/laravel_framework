@@ -7,9 +7,9 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
-	<title>@yield('title', 'Sample') - INSTANT</title>
+	<title>@yield('title', 'Sample') - {{ config('app.name') }}</title>
 	<!-- Bootstrap core CSS -->
-	<link href="https://static.iokvip.com/home/css/app.css" rel="stylesheet">
+	<link href="{{ cdn('home/css/app.css') }}" rel="stylesheet">
 
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
@@ -30,6 +30,6 @@
 	@include('layouts.home._footer')
 
 	<!-- Bootstrap core JavaScript -->
-	<script src="https://static.iokvip.com/home/js/app.js"></script>
+	<script src="{{ cdn('home/js/app.js') }}"></script>
 </body>
 </html>

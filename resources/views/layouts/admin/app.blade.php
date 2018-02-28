@@ -31,7 +31,7 @@ BODY TAG OPTIONS:
 |               | sidebar-mini                            |
 |---------------------------------------------------------|
 -->
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-blue sidebar-mini fixed">
 <div class="wrapper">
 
     <!-- Main Header -->

@@ -7,7 +7,7 @@
  * @param string $data_type
  * @return mixed|null|\SimpleXMLElement
  */
-if (function_exists('curl')) {
+if (! function_exists('curl')) {
     function curl($url, $request_type = 'get', $data_type = 'json') {
         $ch = curl_init ();
         curl_setopt ( $ch, CURLOPT_URL, $url );
@@ -41,7 +41,7 @@ if (function_exists('curl')) {
  * @param $message
  * @param $data
  */
-if (function_exists('api_response')) {
+if (! function_exists('api_response')) {
     function api_response($code, $message, $data) {
         $response_data = [
             'code' => $code,
@@ -57,7 +57,7 @@ if (function_exists('api_response')) {
  * 拼接CDN资源路径
  * @param $file_path 文件路径
  */
-if (function_exists('cdn')) {
+if (! function_exists('cdn')) {
     function cdn($file_path) {
         $cnd_url = config('app.cdn_url');
         if ($cnd_url && $file_path) {
