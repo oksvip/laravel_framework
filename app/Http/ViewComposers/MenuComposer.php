@@ -15,6 +15,7 @@ class MenuComposer
             route('home.works.index') => 'Works',
             route('home.about') => 'About',
             route('home.contact') => 'Contact',
+            route('admin.index') => 'Admin',
         ];
     }
 

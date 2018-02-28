@@ -25,10 +25,12 @@ class UsersController extends AdminBaseController
      */
     public function index()
     {
-        return $this->user->with('articles')
-            ->searchName('Mr')
-            ->orderByCreatedAtAndId('desc')
-            ->get();
+        // $this->user->with('articles')
+        //     ->searchName('Mr')
+        //     ->orderByCreatedAtAndId('desc')
+        //     ->get();
+
+        return view('admin.users.index');
     }
 
     /**

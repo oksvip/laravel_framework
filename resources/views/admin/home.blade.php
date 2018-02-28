@@ -9,12 +9,12 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                Dashboard
-                <small>Control panel</small>
+                首页
+                <small>仪表盘</small>
             </h1>
             <ol class="breadcrumb">
-                <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-                <li class="active">Dashboard</li>
+                <li><a href="#"><i class="fa fa-dashboard"></i> 首页</a></li>
+                <li class="active">仪表盘</li>
             </ol>
         </section>
 
@@ -122,7 +122,7 @@
                         <div class="box-body chat" id="chat-box">
                             <!-- chat item -->
                             <div class="item">
-                                <img src="dist/img/user4-128x128.jpg" alt="user image" class="online">
+                                <img src="{{ cdn('admin/images/adminlte/user4-128x128.jpg') }}" alt="user image" class="online">
 
                                 <p class="message">
                                     <a href="#" class="name">
@@ -149,7 +149,7 @@
                             <!-- /.item -->
                             <!-- chat item -->
                             <div class="item">
-                                <img src="dist/img/user3-128x128.jpg" alt="user image" class="offline">
+                                <img src="{{ cdn('admin/images/adminlte/user3-128x128.jpg') }}" alt="user image" class="offline">
 
                                 <p class="message">
                                     <a href="#" class="name">
@@ -164,7 +164,7 @@
                             <!-- /.item -->
                             <!-- chat item -->
                             <div class="item">
-                                <img src="dist/img/user2-160x160.jpg" alt="user image" class="offline">
+                                <img src="{{ cdn('admin/images/adminlte/user2-160x160.jpg') }}" alt="user image" class="offline">
 
                                 <p class="message">
                                     <a href="#" class="name">
@@ -554,6 +554,6 @@
 
 @section('js')
     <script>
-//        $.widget.bridge('uibutton', $.ui.button);
+        $.widget.bridge('uibutton', $.ui.button);
     </script>
 @endsection

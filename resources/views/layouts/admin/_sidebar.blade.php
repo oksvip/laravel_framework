@@ -25,7 +25,7 @@
         <ul class="sidebar-menu" data-widget="tree">
             <li class="header">用户模块</li>
             <!-- Optionally, you can add icons to the links -->
-            <li><a href="#"><i class="fa fa-user"></i> <span>用户管理</span></a></li>
+            <li><a href="{{ route('admin.users.index') }}"><i class="fa fa-user"></i> <span>用户管理</span></a></li>
             <li><a href="#"><i class="fa fa-tag"></i> <span>用户标签管理</span></a></li>
         </ul>
         <!-- /.sidebar-menu -->
