@@ -7,7 +7,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="{{ route('home.index') }}">{{ env('APP_NAME', 'SUNRISE') }}</a>
+			<a class="navbar-brand" href="{{ route('home.index') }}">{{ config('app.name', 'SAMPLE') }}</a>
 		</div>
 		<!-- Menu -->
 		<div class="navbar-collapse collapse">
