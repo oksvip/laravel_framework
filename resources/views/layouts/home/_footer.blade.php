@@ -29,7 +29,7 @@
 	<div class="container">
 		<div class="row centered">
 			<div class="col-lg-4">
-				<p>&copy 2017 Power By <a href="{{ config('app.url') }}">{{ env('APP_NAME', 'SAMPLE') }}</a></p>
+				<p>&copy 2017 Power By <a href="{{ config('app.url') }}">{{ config('app.name', 'SAMPLE') }}</a></p>
 			</div>
 			<div class="col-lg-4">
 				<p>皖ICP备15003511号</p>
